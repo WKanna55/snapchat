@@ -11,7 +11,6 @@
         <!--Iniciar Sesion View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="IniciarSesionViewController" customModule="KanaSnapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -71,6 +70,30 @@
                                     <action selector="iniciarSesionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U1D-s7-q1y"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="o" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeS-zl-9Pe">
+                                <rect key="frame" x="202" y="502.5" width="10" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJz-ty-4el">
+                                <rect key="frame" x="127" y="533.5" width="160.5" height="28"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Ingresar como anonimo">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ingresarAnonimoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="znd-iU-VCc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -82,8 +105,12 @@
                             <constraint firstItem="xFZ-tG-MtE" firstAttribute="top" secondItem="OkI-Ur-jmw" secondAttribute="bottom" constant="25" id="Shx-7M-32a"/>
                             <constraint firstItem="0eL-EI-Jmf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TWG-o5-FGn"/>
                             <constraint firstItem="xFZ-tG-MtE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Uwu-M5-V2v"/>
+                            <constraint firstItem="HJz-ty-4el" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Wcu-2I-pYo"/>
+                            <constraint firstItem="LeS-zl-9Pe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aWg-m8-Ycs"/>
                             <constraint firstItem="0eL-EI-Jmf" firstAttribute="top" secondItem="1tj-n0-bkV" secondAttribute="bottom" constant="25" id="fU8-uB-E6f"/>
                             <constraint firstItem="lHV-q8-qoY" firstAttribute="top" secondItem="xFZ-tG-MtE" secondAttribute="bottom" constant="30" id="k2A-q5-9IM"/>
+                            <constraint firstItem="HJz-ty-4el" firstAttribute="top" secondItem="LeS-zl-9Pe" secondAttribute="bottom" constant="10" id="k8V-wR-J68"/>
+                            <constraint firstItem="LeS-zl-9Pe" firstAttribute="top" secondItem="lHV-q8-qoY" secondAttribute="bottom" constant="10" id="mqt-tm-0kN"/>
                             <constraint firstItem="rQl-q4-2cx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="pW5-WS-bNI"/>
                             <constraint firstItem="OkI-Ur-jmw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yxp-Q5-e6h"/>
                             <constraint firstItem="1tj-n0-bkV" firstAttribute="top" secondItem="rQl-q4-2cx" secondAttribute="bottom" constant="25" id="zwu-c9-lwi"/>
@@ -94,6 +121,7 @@
                         <outlet property="passwordTextField" destination="xFZ-tG-MtE" id="LLc-En-txq"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="122" y="90"/>
         </scene>

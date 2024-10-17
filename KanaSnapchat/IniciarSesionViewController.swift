@@ -25,6 +25,18 @@ class IniciarSesionViewController: UIViewController {
         }
     }
     
+    @IBAction func ingresarAnonimoTapped(_ sender: Any) {
+        Auth.auth().signInAnonymously { (authResult, error) in
+                print("Intentando iniciar sesión anónima")
+                if let error = error {
+                    print("Se presentó el siguiente error: \(error.localizedDescription)")
+                } else {
+                    print("Inicio de sesión anónimo exitoso")
+                }
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
